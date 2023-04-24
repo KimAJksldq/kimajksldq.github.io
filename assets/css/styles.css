@@ -1,0 +1,249 @@
+@import url(./reset.css);
+@import url(./nav.css);
+@import url(./profile.css);
+@import url(./webtoon.css);
+@import url(./gallery.css);
+@import url(./swiper.css);
+@import url(./swiper.min.css);
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+@-webkit-keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+@-moz-keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+@-ms-keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+@-o-keyframes width {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Light';
+  src: url(../fonts/SF-Pro-Text-Light.otf);
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Regular';
+  src: url(../fonts/SF-Pro-Text-Regular.otf);
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Medium';
+  src: url(../fonts/SF-Pro-Text-Medium.otf);
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Semibold';
+  src: url(../fonts/SF-Pro-Text-Semibold.otf);
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Bold';
+  src: url(../fonts/SF-Pro-Text-Bold.otf);
+}
+
+@font-face {
+  font-family: 'SF-Pro-Text-Black.otf';
+  src: url(../fonts/SF-Pro-Text-Black.otf);
+}
+
+body {
+  font-family: 'SF-Pro-Text-Semibold';
+  font-weight: 600 !important;
+  font-size: 10px;
+  color: #333;
+}
+
+main::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+  height: 100%;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.f__light {
+  font-family: 'SF-Pro-Text-Medium';
+  font-weight: 300 !important;
+}
+
+.f__regular {
+  font-family: 'SF-Pro-Text-Regular';
+  font-weight: 400 !important;
+}
+
+.f__medium {
+  font-family: 'SF-Pro-Text-Medium';
+  font-weight: 500 !important;
+}
+
+.f__bold {
+  font-family: 'SF-Pro-Text-Bold';
+  font-weight: bold !important;
+}
+
+.f__black {
+  font-family: 'SF-Pro-Text-Black';
+  font-weight: 800 !important;
+}
+
+main {
+  overflow: hidden;
+  /*-webkit-overflow-scrolling: touch;*/
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+main.scroll {
+  overflow: auto;
+}
+
+main > .inner {
+  height: 500vh;
+  margin: 0 auto;
+  /* position: absolute; */
+  box-shadow: 0 3.2px 2.2px rgba(0, 0, 0, 0.02), 0 7px 5.4px rgba(0, 0, 0, 0.028),
+    0 12.1px 10.1px rgba(0, 0, 0, 0.035), 0 19.8px 18.1px rgba(0, 0, 0, 0.042),
+    0 34.7px 33.8px rgba(0, 0, 0, 0.05), 0 81px 81px rgba(0, 0, 0, 0.07);
+}
+
+main > .inner > section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all 0.35s linear 0s;
+  overflow: hidden;
+}
+
+main > .inner > section > .inner {
+  max-width: 850px;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  /* background: white; */
+  overflow: hidden;
+}
+#loadingWrap.open {
+  display: none;
+}
+#loadingWrap {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#loadingWrap > .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 1280px) {
+  main > .inner {
+    width: 85%;
+  }
+  main > .inner > section > .inner {
+    width: 75%;
+  }
+  section.s1 > .inner > .wrap > ul > li > dl {
+    font-size: 1.1rem;
+  }
+  section.s1 > .inner > .wrap > dl dd strong {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main > .inner > section > .inner {
+    width: 100%;
+  }
+  main > .inner {
+    width: 100%;
+  }
+}

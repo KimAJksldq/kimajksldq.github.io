@@ -1,0 +1,193 @@
+section.s1 {
+  text-align: center;
+}
+
+section.s1 > .inner {
+  background: none !important;
+}
+
+section.s1 > .bg {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -200%;
+  height: 200vh;
+  width: 125%;
+  -webkit-transform: translateX(-50%);
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  background: linear-gradient(#fcf0e4, #ff9c3a);
+  opacity: 0;
+  border-radius: 50%;
+}
+
+section.on.s1 > .bg {
+  top: -135%;
+  opacity: 1;
+}
+
+section.s1 > .inner > .wrap {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+section.s1 > .inner > .wrap > dl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+section.s1 > .inner > .wrap > dl dt span {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0.15s;
+}
+
+section.s1 > .inner > .wrap > dl dt span > img {
+  width: 100%;
+  height: 100%;
+}
+
+section.s1 > .inner > .wrap > dl dd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+section.s1 > .inner > .wrap > dl dd small {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0.25s;
+}
+
+section.s1 > .inner > .wrap > dl dd strong {
+  font-size: 1.8rem;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0.35s;
+}
+
+section.s1 > .inner > .wrap > dl dd strong b {
+  color: white;
+}
+
+section.s1.on .inner > .wrap > dl dt span,
+section.s1.on > .inner > .wrap > dl dd small,
+section.s1.on > .inner > .wrap > dl dd strong {
+  top: 0px;
+  opacity: 1;
+}
+
+section.s1 > .inner > .wrap > ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 110px;
+}
+
+section.s1 > .inner > .wrap > ul > li {
+  width: 45%;
+  margin-top: 34px;
+  position: relative;
+}
+
+section.s1 > .inner > .wrap > ul > li:after {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  content: '';
+  display: block;
+  background: #ffbe56;
+  -webkit-transition: all 0.5s ease-in 0s;
+}
+
+section.s1 > .inner > .wrap > ul > li > dl {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+section.s1 > .inner > .wrap > ul > li > dl dt {
+  font-style: italic;
+  opacity: 0.6;
+}
+
+section.s1.on > .inner > .wrap > ul > li:after {
+  width: 100%;
+}
+
+@media screen and (max-width: 1536px) {
+  section.s1 > .inner > .wrap > ul {
+    margin-top: 74px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  section.s1 > .bg {
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  section.s1 > .bg {
+    width: 200%;
+  }
+
+  section.s1 > .inner > .wrap {
+    width: 90%;
+  }
+
+  section.s1 > .inner > .wrap > dl dd strong {
+    font-size: 1.6rem;
+  }
+
+  section.s1 > .inner > .wrap > ul > li > dl {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  section.on.s1 > .bg {
+    top: -145%;
+    width: 250%;
+  }
+
+  section.s1 > .inner > .wrap > dl dt span {
+    width: 170px;
+    height: 170px;
+  }
+
+  section.s1 > .inner > .wrap > dl dd small {
+    font-size: 1rem;
+  }
+
+  section.s1 > .inner > .wrap > dl dd strong {
+    font-size: 1.4rem;
+  }
+
+  section.s1 > .inner > .wrap > ul {
+    flex-direction: column;
+  }
+
+  section.s1 > .inner > .wrap > ul > li {
+    width: 100%;
+  }
+}

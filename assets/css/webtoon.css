@@ -1,0 +1,116 @@
+/*  */
+main > .inner > section > .inner > img {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  opacity: 0;
+  -webkit-transition: all 0.35s ease-in 0s;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  height: 100%;
+}
+
+main > .inner > section.on > .inner > img {
+  top: 50%;
+  opacity: 1;
+}
+
+main > .inner > section > .inner > dl {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  -webkit-transform: translateX(-50%);
+}
+
+main > .inner > section > .inner > dl dt {
+  max-width: 320px;
+  position: relative;
+  opacity: 0;
+  top: 30px;
+  -webkit-transition: all 0.35s ease-in 0s;
+}
+main > .inner > section.on > .inner > dl dt {
+  opacity: 1;
+  top: 0;
+}
+
+main > .inner > section > .inner > dl dt > img {
+  width: 100%;
+}
+main > .inner > section > .inner > dl dd ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+main > .inner > section > .inner > dl dd ul li {
+  margin-left: 32px;
+  opacity: 0.1;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  background: white;
+  padding: 8px;
+  border-radius: 100px;
+  box-shadow: 0 10px 20px -6px rgba(0,0,0,0.5);
+  -webkit-transition: all 0.15s ease-in-out 0.35s;
+}
+main > .inner > section > .inner > dl dd ul li.naver{
+  background: #00DC64;
+  box-shadow: 0 10px 20px -6px #00DC64;
+}
+main > .inner > section > .inner > dl dd ul li.kakao{
+  background: #FFBC00;
+  box-shadow: 0 10px 20px -6px #FFBC00;
+}
+main > .inner > section > .inner > dl dd ul li.bomtoon{
+  background: #FF33AC;
+  box-shadow: 0 10px 20px -6px #FF33AC;
+}
+main > .inner > section > .inner > dl dd ul li.lezhin{
+  background: #EB1C22;
+  box-shadow: 0 10px 20px -6px #EB1C22;
+}
+main > .inner > section > .inner > dl dd ul li.ktoon{
+  background: #FCCC30;
+  box-shadow: 0 10px 20px -6px #FCCC30;
+}
+
+/* main > .inner > section > .inner > dl dd ul li:hover {
+  opacity: 1;
+} */
+main > .inner > section > .inner > dl dd ul li:first-of-type {
+  margin-left: 0px;
+}
+main > .inner > section > .inner > dl dd ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -50px;
+  -webkit-transition: all 0.15s ease-in-out 0.35s;
+}
+
+main > .inner > section.on > .inner > dl dd ul li {
+  opacity: 1;
+}
+
+main > .inner > section.on > .inner > dl dd ul li a {
+  top: 0px;
+}
+
+main > .inner > section > .inner > dl dd ul li a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1536px) {
+  main > .inner > section > .inner > dl dt {
+    max-width: 240px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main > .inner > section > .inner > dl dd ul li {
+    width: 40px;
+    height: 40px;
+    margin-left: 22px;
+  }
+}
