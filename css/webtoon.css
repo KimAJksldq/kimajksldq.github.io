@@ -83,6 +83,9 @@ main > .inner > section > .inner > dl dd ul li {
   box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.15s ease-in-out 0.35s;
 }
+main > .inner > section > .inner > dl dd ul li.rabbit {
+  background: #000;
+}
 main > .inner > section > .inner > dl dd ul li.naver2 {
   background: #00D463;
   box-shadow: 0 10px 20px -6px #00D463;
