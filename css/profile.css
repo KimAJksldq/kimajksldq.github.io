@@ -16,13 +16,13 @@ section.s1 > .bg {
   width: 125%;
   -webkit-transform: translateX(-50%);
   -webkit-transition: all 0.15s ease-in-out 0s;
-  background: linear-gradient(#fcf0e4, #ff9c3a);
+  background: linear-gradient(#fcf0e4, #ffb63b);
   opacity: 0;
   border-radius: 50%;
 }
 
 section.on.s1 > .bg {
-  top: -135%;
+  top: -145%;
   opacity: 1;
 }
 
@@ -81,7 +81,7 @@ section.s1 > .inner > .wrap > ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 110px;
+  margin-top: 160px;
 }
 
 section.s1 > .inner > .wrap > ul > li {
@@ -143,10 +143,10 @@ section.s1 > .inner > .wrap > ul > li > a > dl dt > img {
 section.s1 > .inner > .wrap > ul > li:nth-of-type(1) > span > dl dt {
   color: #00d96c;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(2) > a > dl dt {
+section.s1 > .inner > .wrap > ul > li:nth-of-type(3) > a > dl dt {
   color: #2c96d4;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(3) > span > dl dt {
+section.s1 > .inner > .wrap > ul > li:nth-of-type(2) > span > dl dt {
   color: #ebdc13;
 }
 section.s1 > .inner > .wrap > ul > li:nth-of-type(4) > a > dl dt {
@@ -156,10 +156,15 @@ section.s1 > .inner > .wrap > ul > li:nth-of-type(4) > a > dl dt {
 section.s1.on > .inner > .wrap > ul > li:after {
   width: 100%;
 }
-
 @media screen and (max-width: 1536px) {
+  section.s1 > .inner > .wrap > dl {
+    -webkit-transform: translateY(15px);
+  }
   section.s1 > .inner > .wrap > ul {
-    margin-top: 74px;
+    margin-top: 84px;
+  }
+  section.on.s1 > .bg {
+    top: -140%;
   }
 }
 
@@ -191,7 +196,7 @@ section.s1.on > .inner > .wrap > ul > li:after {
 @media screen and (max-width: 700px) {
   section.on.s1 > .bg {
     top: -145%;
-    width: 250%;
+    width: 280%;
   }
 
   section.s1 > .inner > .wrap > dl dt span {
