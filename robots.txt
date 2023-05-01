@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kimajksldq.github.io/sitemap.xml
+Sitemap: https://caribo.me/sitemap.xml
