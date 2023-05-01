@@ -245,6 +245,31 @@ main > .inner > section > .inner {
   height: 100%;
   background: rgba(255, 255, 255, 0.8);
 }
+
+#messageCard {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-transition: all 0.15s linear 0s;
+  z-index: 99999;
+  box-sizing: border-box;
+  padding: 18px 22px;
+  border-radius: 8px;
+  background: #fccc30;
+  box-shadow: 0 16px 22px -6px #ffbe56;
+}
+
+#messageCard p {
+  font-size: 1.4rem;
+  color: white;
+  white-space: nowrap;
+}
+
+#messageCard.on {
+  bottom: 40px;
+}
+
 @media screen and (max-width: 1280px) {
   main > .inner {
     width: 85%;
@@ -266,5 +291,8 @@ main > .inner > section > .inner {
   }
   main > .inner {
     width: 100%;
+  }
+  #messageCard p {
+    font-size: 1.2rem;
   }
 }

@@ -129,6 +129,17 @@ section.s1 > .inner > .wrap > ul > li > span > dl dt {
   font-size: 1.5rem;
 }
 
+section.s1 > .inner > .wrap > ul > li > a > dl dt,
+section.s1 > .inner > .wrap > ul > li > span > dl dt {
+  width: 34px;
+  height: 34px;
+}
+
+section.s1 > .inner > .wrap > ul > li > a > dl dt > img {
+  width: 70%;
+  height: 70%;
+}
+
 section.s1 > .inner > .wrap > ul > li:nth-of-type(1) > span > dl dt {
   color: #00d96c;
 }

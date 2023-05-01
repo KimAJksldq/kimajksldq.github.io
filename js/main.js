@@ -12,10 +12,20 @@ $(document).ready(function () {
     $('#section7'),
   ];
 
+  let idtest = null;
+
+  // function hideMessage() {
+  //   $('#messageCard').removeClass('on');
+  // }
+
   $('#phoneCopyBtn').click(function () {
     navigator.clipboard.writeText('01027251185').then(
       () => {
-        alert('텍스트가 복사되었습니다.');
+        clearTimeout(idtest);
+        $('#messageCard').addClass('on');
+        idtest = setTimeout(function () {
+          $('#messageCard').removeClass('on');
+        }, 3000);
       },
       (error) => {
         console.error('Error copying text: ', error);
@@ -25,7 +35,11 @@ $(document).ready(function () {
   $('#mailCopyBtn').click(function () {
     navigator.clipboard.writeText('nnkstory@naver.com').then(
       () => {
-        alert('텍스트가 복사되었습니다.');
+        clearTimeout(idtest);
+        $('#messageCard').addClass('on');
+        idtest = setTimeout(function () {
+          $('#messageCard').removeClass('on');
+        }, 3000);
       },
       (error) => {
         console.error('Error copying text: ', error);
