@@ -13,8 +13,8 @@ main > .inner > section.on > .inner > img {
   top: 50%;
   opacity: 1;
 }
-main > .inner > section:nth-of-type(6) > .inner > dl{
-  bottom: 0px;
+main > .inner > section:nth-of-type(6) > .inner > dl {
+  bottom: 50px;
 }
 main > .inner > section > .inner > dl {
   position: absolute;
@@ -84,11 +84,12 @@ main > .inner > section > .inner > dl dd ul li {
   -webkit-transition: all 0.15s ease-in-out 0.35s;
 }
 main > .inner > section > .inner > dl dd ul li.rabbit {
-  background: #000;
+  background: #fff;
+  box-shadow: 0 10px 20px -6px rgb(211, 211, 211);
 }
 main > .inner > section > .inner > dl dd ul li.naver2 {
-  background: #00D463;
-  box-shadow: 0 10px 20px -6px #00D463;
+  background: #00d463;
+  box-shadow: 0 10px 20px -6px #00d463;
 }
 main > .inner > section > .inner > dl dd ul li.naver {
   background: #00dc64;

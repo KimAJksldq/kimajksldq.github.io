@@ -1,6 +1,7 @@
 $(document).ready(function () {
   let scrollY = 0;
   let screenHeight = screen.height;
+  // console.log($('#main .inner').children());
   const sectionArray = [
     $('#section1'),
     $('#section2'),
@@ -10,6 +11,37 @@ $(document).ready(function () {
     $('#section6'),
     $('#section7'),
   ];
+
+  $('#phoneCopyBtn').click(function () {
+    navigator.clipboard.writeText('01027251185').then(
+      () => {
+        alert('텍스트가 복사되었습니다.');
+      },
+      (error) => {
+        console.error('Error copying text: ', error);
+      }
+    );
+  });
+  $('#mailCopyBtn').click(function () {
+    navigator.clipboard.writeText('nnkstory@naver.com').then(
+      () => {
+        alert('텍스트가 복사되었습니다.');
+      },
+      (error) => {
+        console.error('Error copying text: ', error);
+      }
+    );
+  });
+
+  // window.navigator.clipboard.writeText('테스트 복사').then(
+  //   () => {
+  //     // 복사가 완료되면 이 부분이 호출된다.
+  //     alert('복사 완료!');
+  //   },
+  //   (error) => {
+  //     console.error('Error copying text: ', error);
+  //   }
+  // );
 
   $('td-card').click(function () {
     if ($(this).attr('class') === 'card-0') {

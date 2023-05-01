@@ -89,10 +89,24 @@ section.s1 > .inner > .wrap > ul > li {
   margin-top: 34px;
   position: relative;
 }
+section.s1 > .inner > .wrap > ul > li > a,
+section.s1 > .inner > .wrap > ul > li > span {
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  display: block;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+section.s1 > .inner > .wrap > ul > li > a:hover,
+section.s1 > .inner > .wrap > ul > li > span:hover {
+  background: rgba(255, 161, 69, 0.1);
+}
 
 section.s1 > .inner > .wrap > ul > li:after {
   position: absolute;
-  bottom: -20px;
+  bottom: -12px;
   left: 0;
   width: 0;
   height: 1px;
@@ -102,23 +116,30 @@ section.s1 > .inner > .wrap > ul > li:after {
   -webkit-transition: all 0.5s ease-in 0s;
 }
 
-section.s1 > .inner > .wrap > ul > li > dl {
+section.s1 > .inner > .wrap > ul > li > a > dl,
+section.s1 > .inner > .wrap > ul > li > span > dl {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1.3rem;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(1) > dl dt{
-  color: #00D96C;
+
+section.s1 > .inner > .wrap > ul > li > a > dl dt,
+section.s1 > .inner > .wrap > ul > li > span > dl dt {
+  font-size: 1.5rem;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(2) > dl dt{
-  color: #2C96D4
+
+section.s1 > .inner > .wrap > ul > li:nth-of-type(1) > span > dl dt {
+  color: #00d96c;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(3) > dl dt{
+section.s1 > .inner > .wrap > ul > li:nth-of-type(2) > a > dl dt {
+  color: #2c96d4;
+}
+section.s1 > .inner > .wrap > ul > li:nth-of-type(3) > span > dl dt {
   color: #ebdc13;
 }
-section.s1 > .inner > .wrap > ul > li:nth-of-type(4) > dl dt{
-  color: #AA35B1
+section.s1 > .inner > .wrap > ul > li:nth-of-type(4) > a > dl dt {
+  color: #aa35b1;
 }
 
 section.s1.on > .inner > .wrap > ul > li:after {
@@ -150,12 +171,13 @@ section.s1.on > .inner > .wrap > ul > li:after {
     font-size: 1.6rem;
   }
 
-  section.s1 > .inner > .wrap > ul > li > dl {
+  section.s1 > .inner > .wrap > ul > li > a > dl,
+  section.s1 > .inner > .wrap > ul > li > span > dl {
     font-size: 1.1rem;
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
   section.on.s1 > .bg {
     top: -145%;
     width: 250%;
@@ -177,7 +199,6 @@ section.s1.on > .inner > .wrap > ul > li:after {
   section.s1 > .inner > .wrap > ul {
     flex-direction: column;
   }
-
   section.s1 > .inner > .wrap > ul > li {
     width: 100%;
   }
