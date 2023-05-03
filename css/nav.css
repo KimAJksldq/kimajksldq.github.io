@@ -10,7 +10,7 @@ nav ul li {
   opacity: 0.6;
   overflow: hidden;
   text-align: right;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -28,6 +28,7 @@ nav ul li > span:nth-of-type(2) {
 
 nav ul li > span p {
   font-size: 1.2rem;
+  margin: 0px;
   -webkit-transform: translateX(250px);
   -webkit-transition: all 0.27s ease-in-out 0s;
 }

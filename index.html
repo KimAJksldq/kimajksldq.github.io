@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="웹툰작가, 디자이너, 프리랜서, 디자인" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
+    <meta name="keywords" content="웹툰작가, 디자이너, 프리랜서, 디자인, 의뢰, 웹툰, 포트폴리오, 아카이빙, 홈페이지, 웹사이트, 작가" />
     <meta name="description" content="안녕하세요 웹툰작가 카리보의 작업물 아카이빙입니다." />
     <meta name="author" content="CARIBO" />
     <meta property="og:type" content="website" />
@@ -22,8 +22,6 @@
     <script src="./js/card1.js"></script>
     <script src="./js/card2.js"></script>
     <script src="./js/card3.js"></script>
-    <link href="./css/card1.css" rel="stylesheet" />
-    <link href="./css/card2.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" />
   </head>
@@ -33,14 +31,25 @@
       const loadingImg = () => {
         completedImgCnt = completedImgCnt + 1;
         if (completedImgCnt === 18) {
-          $('#loadingWrap').addClass('open');
+          $('.loadingWrap.pencil').addClass('open');
         }
       };
     </script>
-    <div id="loadingWrap">
+    <div class="loadingWrap pencil">
       <div class="bg"></div>
       <lottie-player
         src="./img/pencil.json"
+        background="transparent"
+        speed="1"
+        style="width: 400px; height: 400px"
+        loop
+        autoplay
+      ></lottie-player>
+    </div>
+    <div class="loadingWrap email open">
+      <div class="bg"></div>
+      <lottie-player
+        src="./img/email.json"
         background="transparent"
         speed="1"
         style="width: 400px; height: 400px"
@@ -110,7 +119,7 @@
     <!--  -->
     <div id="messageCard">
       <span></span>
-      <p class="f__tb">클립보드에 복사되었습니다.</p>
+      <p class="f__tb"></p>
     </div>
     <!--  -->
     <nav>
@@ -155,6 +164,12 @@
           <span class="icon"></span>
           <span>
             <p class="f__tb">그 외 작업물</p>
+          </span>
+        </li>
+        <li>
+          <span class="icon"></span>
+          <span>
+            <p class="f__tb">문의하기</p>
           </span>
         </li>
       </ul>
@@ -471,6 +486,55 @@
           </div>
         </section>
         <!-- // 갤러리 -->
+        <!-- 문의하기 -->
+        <section id="section8" class="contactus">
+          <div class="inner">
+            <form id="contactForm">
+              <div>
+                <ul>
+                  <li>
+                    <label class="f__tb" for="">카테고리</label>
+                    <span>
+                      <select name="subject" id="subjectInput">
+                        <option value="웹툰문의">웹툰문의</option>
+                        <option value="디자인문의">디자인문의</option>
+                        <option value="기타문의">기타문의</option>
+                      </select>
+                    </span>
+                  </li>
+                  <li>
+                    <label class="f__tb" for="titleInput">제목</label>
+                    <span>
+                      <input type="text" id="titleInput" name="title">
+                    </span>
+                  </li>
+                  <li>
+                    <label class="f__tb" for="emailInput">이메일</label>
+                    <span>
+                      <input type="email" id="emailInput" name="email">
+                    </span>
+                  </li>
+                  <li>
+                    <label class="f__tb" for="phoneInput">연락처</label>
+                    <span>
+                      <input type="number" id="phoneInput" name="phone" placeholder="- 빼고 숫자만 입력해주세요.">
+                    </span>
+                  </li>
+                  <li>
+                    <label class="f__tb" for="bodyInput">내용</label>
+                    <span>
+                      <textarea name="body" id="bodyInput"></textarea>
+                    </span>
+                  </li>
+                  <li>
+                    <button class="f__tb" id="submitBtn">보내기</button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- // 문의하기 -->
       </div>
     </main>
     <script src="./js/cardInit.js"></script>
