@@ -157,8 +157,8 @@ section.contactus > .inner form > div ul li:last-of-type{
     section.contactus > .inner form > div ul li input,
     section.contactus > .inner form > div ul li textarea,
     section.contactus > .inner form > div ul li button{
-        min-height: 60px;
-        max-height: 60px;
+        min-height: 44px;
+        max-height: 44px;
     }
     section.contactus > .inner form > div ul li textarea{
         min-height: 84px;
