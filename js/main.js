@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  
+
   let timerId = null;
   let scrollY = 0;
   let screenHeight = screen.height;
@@ -24,22 +24,27 @@ $(document).ready(function () {
     });
     $('#main.scroll').smoothWheel();
   } else {
-    const wh = $(window).height();
+    const dh = $(document).height();
     $(window).resize(function () {
-      if(wh === $(document).height()) {
+      if(dh === $(document).height()) {
         $('#main')[0].scrollTo(0,999999);
       }
     });
   }
 
-  $("#testP").click(function(){
-    $('#main').animate({ scrollTop: sectionArray[7][0].offsetTop + 10 }, 400);
+  $("#subjectInput").click(function(){
+    $("#categorySelect").addClass("on")
   })
 
-  const form = document.getElementById('contactForm');
+  $("#categorySelect li").click(function(){
+    $("#categorySelect li").removeClass("on")
+    $(this).addClass("on")
+    $("#subjectInput").val($(this).text())
+    $("#categorySelect").removeClass("on")
+  })
+
   $("#submitBtn").click(function(e){
     e.preventDefault();
-    console.log("클릭")
     const v1 = $("#subjectInput").val();
     const v2 = $("#titleInput").val();
     const v3 = $("#emailInput").val();
@@ -70,6 +75,7 @@ $(document).ready(function () {
       pw : "WlGhks010!@#",
       from : v3,
       to : "nnkstory@naver.com",
+      // nnkstory@naver.com
       subject : `[${v1}] ${v2}`,
       title : v2,
       body : `

@@ -350,6 +350,9 @@
                   $timeout(function () {
                     // 이것만 수정 imgCount
                     $('#main').addClass('scroll');
+                    setTimeout(function () {
+                      $('#main').addClass('scroll');
+                    }, 500);
                     const imgCount = 2;
                     const y = 2 * (imgCount - 1);
                     // $scope.onDestroy();

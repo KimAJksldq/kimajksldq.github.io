@@ -493,13 +493,14 @@
               <div>
                 <ul>
                   <li>
-                    <label class="f__tb" for="">카테고리</label>
+                    <label class="f__tb" for="subjectInput">카테고리</label>
                     <span>
-                      <select name="subject" id="subjectInput">
-                        <option value="웹툰문의">웹툰문의</option>
-                        <option value="디자인문의">디자인문의</option>
-                        <option value="기타문의">기타문의</option>
-                      </select>
+                      <input type="text" id="subjectInput" readonly value="웹툰문의" name="subject">
+                      <ul id="categorySelect">
+                        <li class="on">웹툰문의</li>
+                        <li>디자인문의</li>
+                        <li>기타문의</li>
+                      </ul>
                     </span>
                   </li>
                   <li>
