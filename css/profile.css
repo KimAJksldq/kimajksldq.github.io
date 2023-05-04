@@ -134,6 +134,8 @@ section.s1 > .inner > .wrap > ul > li > a > dl dt,
 section.s1 > .inner > .wrap > ul > li > span > dl dt {
   width: 34px;
   height: 34px;
+  display: flex;
+  align-items: center;
 }
 
 section.s1 > .inner > .wrap > ul > li > a > dl dt > img {
