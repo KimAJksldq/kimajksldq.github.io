@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   let timerId = null;
   let scrollY = 0;
   let screenHeight = screen.height;
@@ -10,11 +9,11 @@ $(document).ready(function () {
     timerId = setTimeout(function () {
       $('#messageCard').removeClass('on');
     }, 3000);
-  }
+  };
 
   let userAgent = navigator.userAgent;
   let isPC = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-  
+
   if (isPC) {
     $(window).resize(function () {
       if (screenHeight < $(window).height()) {
@@ -26,59 +25,59 @@ $(document).ready(function () {
   } else {
     const dh = $(document).height();
     $(window).resize(function () {
-      if(dh === $(document).height()) {
-        $('#main')[0].scrollTo(0,999999);
+      if (dh === $(document).height()) {
+        $('#main')[0].scrollTo(0, 999999);
       }
     });
   }
 
-  $("#subjectInput").click(function(){
-    $("#categorySelect").addClass("on")
-  })
+  $('#subjectInput').click(function () {
+    $('#categorySelect').addClass('on');
+  });
 
-  $("#categorySelect li").click(function(){
-    $("#categorySelect li").removeClass("on")
-    $(this).addClass("on")
-    $("#subjectInput").val($(this).text())
-    $("#categorySelect").removeClass("on")
-  })
+  $('#categorySelect li').click(function () {
+    $('#categorySelect li').removeClass('on');
+    $(this).addClass('on');
+    $('#subjectInput').val($(this).text());
+    $('#categorySelect').removeClass('on');
+  });
 
-  $("#submitBtn").click(function(e){
+  $('#submitBtn').click(function (e) {
     e.preventDefault();
-    const v1 = $("#subjectInput").val();
-    const v2 = $("#titleInput").val();
-    const v3 = $("#emailInput").val();
-    const v4 = $("#phoneInput").val();
-    const v5 = $("#bodyInput").val();
-    if(v2 === ""){
-      $('#messageCard p').text("제목을 입력해주세요.");
+    const v1 = $('#subjectInput').val();
+    const v2 = $('#titleInput').val();
+    const v3 = $('#emailInput').val();
+    const v4 = $('#phoneInput').val();
+    const v5 = $('#bodyInput').val();
+    if (v2 === '') {
+      $('#messageCard p').text('제목을 입력해주세요.');
       msgCardActive();
       return;
     }
-    if(v3 === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v3)){
-      $('#messageCard p').text("이메을을 확인해주세요.");
+    if (v3 === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v3)) {
+      $('#messageCard p').text('이메을을 확인해주세요.');
       msgCardActive();
       return;
     }
-    if(v4 === "" || !/^[0-9]{9,11}$/i.test(v4)){
-      $('#messageCard p').text("번호를 확인해주세요.");
+    if (v4 === '' || !/^[0-9]{9,11}$/i.test(v4)) {
+      $('#messageCard p').text('번호를 확인해주세요.');
       msgCardActive();
       return;
     }
-    if(v5 === ""){
-      $('#messageCard p').text("내용을 입력해주세요.");
+    if (v5 === '') {
+      $('#messageCard p').text('내용을 입력해주세요.');
       msgCardActive();
       return;
     }
-    $(".loadingWrap.email").removeClass("open");
+    $('.loadingWrap.email').removeClass('open');
     const param = {
-      pw : "WlGhks010!@#",
-      from : v3,
-      to : "nnkstory@naver.com",
+      pw: 'WlGhks010!@#',
+      from: v3,
+      to: 'nnkstory@naver.com',
       // nnkstory@naver.com
-      subject : `[${v1}] ${v2}`,
-      title : v2,
-      body : `
+      subject: `[${v1}] ${v2}`,
+      title: v2,
+      body: `
       <div style="margin: 16px 0 0 0; padding: 12px 12px 60px 12px;box-sizing: border-box;">
         <div style="padding: 34px; box-sizing: border-box;background: #fff;border-radius: 12px;box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);">
           <h1 style="margin: 0;padding: 0; color: #414141;">'카리보'님의 사이트로부터 문의 메일이 도착했습니다.</h1>
@@ -107,35 +106,38 @@ $(document).ready(function () {
           <p style="margin-top:30px;">${v5}</p>
         </div>
       </div>
-      `
-    }
+      `,
+    };
 
     try {
-      fetch ('https://port-0-email-service-687p2alh73yb2l.sel4.cloudtype.app/send', {
+      // https://port-0-email-service-687p2alh73yb2l.sel4.cloudtype.app
+      fetch('https://port-0-email-service-687p2alh73yb2l.sel4.cloudtype.app/email/send', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(param),
       })
-      .then((response) => response.text())
-      .then((text) => {
-        $("#titleInput").val("");
-        $("#emailInput").val("");
-        $("#phoneInput").val("");
-        $("#bodyInput").val("");
-        alert("메일 전송되었습니다!");
-        $(".loadingWrap.email").addClass("open");
-      })
-      .catch((error) => {
-        alert("메일 전송이 실패했습니다.");
-        $(".loadingWrap.email").addClass("open");
-      });
+        .then((response) => response.text())
+        .then((text) => {
+          $('#titleInput').val('');
+          $('#emailInput').val('');
+          $('#phoneInput').val('');
+          $('#bodyInput').val('');
+          alert('메일 전송되었습니다!');
+          $('.loadingWrap.email').addClass('open');
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('메일 전송이 실패했습니다.');
+          $('.loadingWrap.email').addClass('open');
+        });
     } catch (error) {
-      alert("메일 전송이 실패했습니다.");
-      $(".loadingWrap.email").addClass("open");
+      console.log(error);
+      alert('메일 전송이 실패했습니다.');
+      $('.loadingWrap.email').addClass('open');
     }
-  })
-  // 
-  
+  });
+  //
+
   const sectionArray = [
     $('#section1'),
     $('#section2'),
@@ -148,7 +150,7 @@ $(document).ready(function () {
   ];
 
   $('#phoneCopyBtn').click(function () {
-    $('#messageCard p').text("클립보드에 복사되었습니다.")
+    $('#messageCard p').text('클립보드에 복사되었습니다.');
     navigator.clipboard.writeText('01027251185').then(
       () => {
         msgCardActive();
@@ -159,7 +161,7 @@ $(document).ready(function () {
     );
   });
   $('#mailCopyBtn').click(function () {
-    $('#messageCard p').text("클립보드에 복사되었습니다.")
+    $('#messageCard p').text('클립보드에 복사되었습니다.');
     navigator.clipboard.writeText('nnkstory@naver.com').then(
       () => {
         msgCardActive();
@@ -230,7 +232,8 @@ $(document).ready(function () {
     } else if (direction === 'Scroll Up') {
       for (let i = 0; i < sectionArray.length; i++) {
         if (
-          sectionArray[i][0].offsetTop + $(sectionArray[i][0]).height() / 2 < $('#main').scrollTop()
+          sectionArray[i][0].offsetTop + $(sectionArray[i][0]).height() / 2 <
+          $('#main').scrollTop()
         ) {
           if (scrollY < i) {
             scrollY = i;
@@ -256,5 +259,4 @@ $(document).ready(function () {
     $('nav ul>li').eq(idx).addClass('on');
     $('#main>.inner>section').eq(idx).addClass('on');
   };
-
 });
