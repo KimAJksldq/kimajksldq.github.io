@@ -1,22 +1,22 @@
-main > .inner > section.contactus > .inner{
+main > .inner > section.contactus > .inner {
   display: flex;
   align-items: center;
 }
-main > .inner > section.contactus > .inner form{
+main > .inner > section.contactus > .inner form {
   width: 100%;
 }
 
-section.contactus > .inner form > div{
+section.contactus > .inner form > div {
   padding: 0 16px 16px 16px;
   box-sizing: border-box;
   width: 80%;
   margin: 0 auto;
 }
-section.contactus > .inner form > div ul li:first-of-type span{
+section.contactus > .inner form > div ul li:first-of-type span {
   position: relative;
   z-index: 1000;
 }
-section.contactus > .inner form > div ul li:first-of-type ul{
+section.contactus > .inner form > div ul li:first-of-type ul {
   position: absolute;
   left: 0;
   top: 0px;
@@ -31,11 +31,11 @@ section.contactus > .inner form > div ul li:first-of-type ul{
   -webkit-transform: scaleY(0);
   -webkit-transition: all 0.25s ease-in-out 0s;
 }
-section.contactus > .inner form > div ul li:first-of-type ul.on{
+section.contactus > .inner form > div ul li:first-of-type ul.on {
   opacity: 1;
   -webkit-transform: scaleY(1);
 }
-section.contactus > .inner form > div ul>li:first-of-type ul li{
+section.contactus > .inner form > div ul > li:first-of-type ul li {
   width: 100%;
   padding: 0 12px;
   box-sizing: border-box;
@@ -43,32 +43,32 @@ section.contactus > .inner form > div ul>li:first-of-type ul li{
   max-height: 44px;
   line-height: 44px;
   cursor: pointer;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
   margin-bottom: 0px;
 }
-section.contactus > .inner form > div ul>li:first-of-type ul li.on{
+section.contactus > .inner form > div ul > li:first-of-type ul li.on {
   background: #fae0c5;
 }
-section.contactus > .inner form > div ul>li:first-of-type ul li:last-of-type{
+section.contactus > .inner form > div ul > li:first-of-type ul li:last-of-type {
   margin-top: 0px;
 }
-section.contactus > .inner form > div ul li:first-of-type input{
+section.contactus > .inner form > div ul li:first-of-type input {
   cursor: pointer;
   background: url('../img/568102.png') no-repeat calc(100% - 12px) 50%;
   background-size: auto 40%;
 }
-section.contactus > .inner form > div ul li{
+section.contactus > .inner form > div ul li {
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
 }
-section.contactus > .inner form > div ul li label{
+section.contactus > .inner form > div ul li label {
   margin-bottom: 9px;
   font-size: 1.1rem;
   position: relative;
 }
-section.contactus > .inner form > div ul li label:after{
+section.contactus > .inner form > div ul li label:after {
   content: '';
   background-color: #ff9c3a;
   border-radius: 20px;
@@ -80,33 +80,33 @@ section.contactus > .inner form > div ul li label:after{
   bottom: 2px;
   -webkit-transition: all 0.35s ease-in-out 0s;
 }
-section.contactus > .inner form > div ul li span{
+section.contactus > .inner form > div ul li span {
   position: relative;
 }
-section.contactus > .inner form > div ul li span:after{
+section.contactus > .inner form > div ul li span:after {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  content: "";
+  content: '';
   background: white;
   -webkit-transition: all 1s ease-in-out 0s;
   -webkit-transform: scaleX(1);
   -webkit-transform-origin: 100% 50%;
 }
-section.contactus.on > .inner form > div ul li span:after{
+section.contactus.on > .inner form > div ul li span:after {
   -webkit-transform: scaleX(0);
 }
 section.contactus > .inner form > div ul li input::-webkit-outer-spin-button,
-section.contactus > .inner form > div ul li input::-webkit-inner-spin-button{
+section.contactus > .inner form > div ul li input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-  margin: 0; 
+  margin: 0;
 }
 
 section.contactus > .inner form > div ul li input,
 section.contactus > .inner form > div ul li textarea,
-section.contactus > .inner form > div ul li button{
+section.contactus > .inner form > div ul li button {
   width: 100%;
   padding: 0 12px;
   box-sizing: border-box;
@@ -116,55 +116,58 @@ section.contactus > .inner form > div ul li button{
   max-height: 44px;
   -webkit-transition: all 1s ease-in-out 0s;
 }
-section.contactus > .inner form > div ul li textarea{
+
+section.contactus.on > .inner form > div ul li input,
+section.contactus.on > .inner form > div ul li textarea,
+section.contactus.on > .inner form > div ul li button {
+  box-shadow: 0 10px 20px -14px #ff9c3a;
+}
+
+section.contactus > .inner form > div ul li textarea {
   padding: 12px;
   min-height: 88px;
   max-height: 88px;
 }
-  
-section.contactus > .inner form > div ul li button{
+
+section.contactus > .inner form > div ul li button {
   -webkit-transition: all 0.35s ease-in-out 0s;
 }
-section.contactus.on > .inner form > div ul li input,
-section.contactus > .inner form > div ul li textarea,
-section.contactus.on > .inner form > div ul li button{
-  box-shadow: 0 10px 20px -14px #ff9c3a;
-}
-section.contactus > .inner form > div ul li button{
+
+section.contactus > .inner form > div ul li button {
   color: #ff9c3a;
 }
-section.contactus > .inner form > div ul li button:hover{
+section.contactus > .inner form > div ul li button:hover {
   background: #fae0c5;
 }
-section.contactus > .inner form > div ul li:last-of-type{
+section.contactus > .inner form > div ul li:last-of-type {
   margin-bottom: 0px;
   margin-top: 26px;
 }
 
 @media screen and (max-width: 1280px) {
-    section.contactus > .inner form > div{
-      width: 100%;  
-    }
+  section.contactus > .inner form > div {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 750px) {
-    section.contactus > .inner form > div ul li{
-        margin-bottom: 12px;
-    }
-    section.contactus > .inner form > div ul li label{
-        font-size: 1rem;
-    }
-    section.contactus > .inner form > div ul li input,
-    section.contactus > .inner form > div ul li textarea,
-    section.contactus > .inner form > div ul li button{
-        min-height: 44px;
-        max-height: 44px;
-    }
-    section.contactus > .inner form > div ul li textarea{
-        min-height: 84px;
-        max-height: 84px;
-    }
-    section.contactus > .inner form > div ul li span:after{
-        -webkit-transform: scale(0);
-    }
+  section.contactus > .inner form > div ul li {
+    margin-bottom: 12px;
+  }
+  section.contactus > .inner form > div ul li label {
+    font-size: 1rem;
+  }
+  section.contactus > .inner form > div ul li input,
+  section.contactus > .inner form > div ul li textarea,
+  section.contactus > .inner form > div ul li button {
+    min-height: 44px;
+    max-height: 44px;
+  }
+  section.contactus > .inner form > div ul li textarea {
+    min-height: 84px;
+    max-height: 84px;
+  }
+  section.contactus > .inner form > div ul li span:after {
+    -webkit-transform: scale(0);
+  }
 }

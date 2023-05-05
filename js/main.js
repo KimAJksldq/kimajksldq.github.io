@@ -55,7 +55,7 @@ $(document).ready(function () {
       return;
     }
     if (v3 === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v3)) {
-      $('#messageCard p').text('이메을을 확인해주세요.');
+      $('#messageCard p').text('이메일을 확인해주세요.');
       msgCardActive();
       return;
     }
