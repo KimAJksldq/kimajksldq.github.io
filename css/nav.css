@@ -1,0 +1,85 @@
+nav {
+  z-index: 1000;
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+}
+
+nav ul li {
+  opacity: 0.6;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+nav ul li:last-of-type {
+  margin-bottom: 0px;
+}
+
+nav ul li>span:nth-of-type(2) {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+nav ul li>span p {
+  font-size: 1.2rem;
+  margin: 0px;
+  -webkit-transform: translateX(250px);
+  -webkit-transition: all 0.27s ease-in-out 0s;
+}
+
+nav ul li>.icon {
+  position: relative;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background: rgb(184, 184, 184);
+  border-radius: 100px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+nav ul li>.icon:hover+span p {
+  -webkit-transform: translateX(0);
+}
+
+/* li.on */
+nav ul li.on>.icon {
+  border: 1px solid var(--main-color);
+  width: 10px;
+  height: 10px;
+  background: none;
+}
+
+nav ul li.on {
+  opacity: 1;
+}
+
+nav ul li.on>.icon:after {
+  content: '';
+  display: block;
+  border-radius: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  background: var(--main-color);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+}
+
+nav ul li.on>span p {
+  -webkit-transform: translateX(0);
+  text-shadow: 1px 1px 1px var(--main-color_04);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    display: none;
+  }
+}

@@ -175,7 +175,10 @@ fetch('https://kimjihodo.synology.me:3001/site/popolInfo', {
         `https://site.mypopol.com/src/img/icon/${popolInfo.icon}/mail.png`
       );
       if (popolInfo.profileImg !== null && popolInfo.profileImg !== '') {
-        $('#profileImg').attr('src', './img/' + popolInfo.profileImg);
+        $('#profileImg').attr(
+          'src',
+          `https://site.mypopol.com/${ptId}/${userId}/img/` + popolInfo.profileImg
+        );
       } else {
         $('#profileImg').attr('src', 'https://site.mypopol.com/src/img/profile.jpg');
       }

@@ -1,15 +1,14 @@
-
 const pageInit = () => {
-  $("nav>ul").append(`
+  $('nav>ul').append(`
   <li>
     <span class="icon"></span>
     <span>
       <p class="f__tb">문의하기</p>
     </span>
   </li>
-`)
+`);
 
-  $("#main>.inner").append(`
+  $('#main>.inner').append(`
 <section class="contactus">
         <div class="inner">
           <form id="contactForm">
@@ -57,11 +56,10 @@ const pageInit = () => {
             </div>
           </form>
         </div>
-      </section> `)
+      </section> `);
 
   let timerId = null;
   let scrollY = 0;
-  let screenHeight = screen.height;
 
   const msgCardActive = () => {
     clearTimeout(timerId);
@@ -177,7 +175,7 @@ const pageInit = () => {
   });
   //
 
-  const sectionArray = $("section");
+  const sectionArray = $('section');
 
   $('#phoneCopyBtn').click(function () {
     $('#messageCard p').text('클립보드에 복사되었습니다.');
@@ -243,10 +241,7 @@ const pageInit = () => {
       }
     } else if (direction === 'Scroll Up') {
       for (let i = 0; i < sectionArray.length; i++) {
-        if (
-          sectionArray[i].offsetTop + $(sectionArray[i]).height() / 2 <
-          $('#main').scrollTop()
-        ) {
+        if (sectionArray[i].offsetTop + $(sectionArray[i]).height() / 2 < $('#main').scrollTop()) {
           if (scrollY < i) {
             scrollY = i;
             activeSection(i);
@@ -271,5 +266,4 @@ const pageInit = () => {
     $('nav ul>li').eq(idx).addClass('on');
     $('#main>.inner>section').eq(idx).addClass('on');
   };
-}
-
+};

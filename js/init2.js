@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   let userAgent = navigator.userAgent;
   let isPC = !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-
+  let screenHeight = screen.height;
   if (isPC) {
     $(window).resize(function () {
       if (screenHeight < $(window).height()) {

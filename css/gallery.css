@@ -1,0 +1,143 @@
+.td-cards {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-75%);
+  height: 300px;
+  width: 50px;
+}
+
+.td-cards>.notice {
+  color: #191919;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  white-space: nowrap;
+  font-size: 1.4rem;
+}
+
+.td-cards>.notice:after {
+  content: '';
+  background-color: var(--main-color);
+  border-radius: 20px;
+  width: 0;
+  height: 18px;
+  position: absolute;
+  z-index: -1;
+  left: 28px;
+  bottom: -12px;
+}
+
+.td-cards>.notice:before {
+  content: '';
+  opacity: 0;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  width: 18px;
+  height: 18px;
+  animation-delay: 1.3s;
+  position: absolute;
+  bottom: -12px;
+  right: -52px;
+}
+
+section.on .td-cards>.notice:after {
+  animation: width 0.7s 0s linear alternate forwards;
+}
+
+section.on .td-cards>.notice::before {
+  animation: opacity 0.3s 0.7s linear alternate forwards;
+}
+
+section.on .td-cards>.notice {
+  /* opacity: 1; */
+}
+
+#swiperWrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: none;
+}
+
+#swiperWrap>.bg {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+#swiperWrap>.close__btn {
+  position: absolute;
+  right: 20%;
+  top: 50px;
+  opacity: 0.7;
+}
+
+#swiperWrap>.close__btn:hover {
+  opacity: 1;
+}
+
+#swiperWrap>.close__btn:after {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 7px;
+  border-radius: 100px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+}
+
+#swiperWrap>.close__btn::before {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 7px;
+  border-radius: 100px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+}
+
+#swiperWrap.on {
+  display: block;
+}
+
+@media screen and (max-width: 1280px) {
+  .td-cards>.notice {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .td-cards {
+    -webkit-transform: translateX(-50%) translateY(-65%);
+  }
+
+  .td-cards>.notice {
+    font-size: 1rem;
+    top: 10px;
+  }
+
+  .td-cards>.notice:after {
+    height: 12px;
+    left: 16px;
+    bottom: -4px;
+  }
+
+  .td-cards>.notice:before {
+    width: 12px;
+    height: 12px;
+    right: -28px;
+    bottom: -4px;
+  }
+}

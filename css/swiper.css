@@ -1,0 +1,119 @@
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide .img__box{
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0 6px 26px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .swiper-slide .img__box img {
+    width: 400px;
+    height: 500px;
+    border-radius: 8px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+  }
+  .swiper-slide.swiper-slide-next{
+    opacity: 0.2;
+    -webkit-transform: scale(0.8);
+    z-index: -1;
+    left: -188px;
+  }
+  .swiper-slide.swiper-slide-prev{
+    opacity: 0.2;
+    -webkit-transform: scale(0.8);
+    z-index: -1;
+    left: 188px;
+  }
+  /* .swiper-slide{
+    -webkit-transition: all 0.35s ease-in-out 0s;
+  } */
+  #swiperWrap>.mySwiper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    max-height: 600px;
+    max-width: 600px;
+}
+  @media screen and (max-width: 1280px) {
+    #swiperWrap>.close__btn{
+        right: 10%;
+        top: 50px;
+        opacity: .7;
+    }
+}
+@media screen and (max-width: 950px) {
+    #swiperWrap>.close__btn{
+        top: 30px;
+        right: 50px;
+    }
+    #swiperWrap>.mySwiper{
+      width: 510px;
+      height: 510px;
+    }
+    .swiper-slide .img__box{
+      width: 340px;
+      height: 425px;
+    }
+  
+    .swiper-slide .img__box img {
+      width: 340px;
+      height: 425px;
+    }
+    .swiper-slide.swiper-slide-next{
+      left: -153px;
+    }
+    .swiper-slide.swiper-slide-prev{
+      left: 153px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+  #swiperWrap>.close__btn{
+    top: 80px;
+    right: 50px;
+  }
+  #swiperWrap>.mySwiper{
+    width: 390px;
+    height: 390px;
+  }
+  .swiper-slide .img__box{
+    width: 260px;
+    height: 325px;
+  }
+
+  .swiper-slide .img__box img {
+    width: 260px;
+    height: 325px;
+  }
+  .swiper-slide.swiper-slide-next{
+    left: -123px;
+  }
+  .swiper-slide.swiper-slide-prev{
+    left: 123px;
+  }
+}

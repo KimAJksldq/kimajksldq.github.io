@@ -1,0 +1,329 @@
+@import url(./reset.css);
+@import url(./nav.css);
+@import url(./profile.css);
+@import url(./webtoon.css);
+@import url(./gallery.css);
+@import url(./card1.css);
+@import url(./card2.css);
+@import url(./contactus.css);
+@import url(./swiper.css);
+@import url(./swiper.min.css);
+
+@keyframes width {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@-webkit-keyframes width {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@-moz-keyframes width {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@-ms-keyframes width {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@-o-keyframes width {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: calc(100% - 10px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: 'Ycomputer';
+  src: url(../fonts/Ycomputer.otf);
+}
+
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url(../fonts/PyeongChangPeace-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Cafe24Danjunghae';
+  src: url(../fonts/Cafe24Danjunghae.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'YUniverse-B';
+  src: url(../fonts/YUniverse-B.otf);
+}
+
+@font-face {
+  font-family: 'YUniverse-L';
+  src: url(../fonts/YUniverse-L.otf);
+}
+
+@font-face {
+  font-family: 'TAEBAEK-milkyway';
+  src: url(../fonts/TAEBAEK-milkyway.ttf) format('truetype');
+}
+
+body {
+  font-family: 'SF-Pro-Text-Semibold';
+  font-weight: 600 !important;
+  font-size: 10px;
+  color: #333;
+  overflow-x: hidden;
+}
+
+main::-webkit-scrollbar {
+  width: 8px;
+  background-color: white;
+  height: 100%;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: #b9b9b9;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+.f__pc {
+  font-family: 'PyeongChangPeace-Bold';
+  font-weight: 500 !important;
+}
+
+.f__yc {
+  font-family: 'Ycomputer';
+  font-weight: 700 !important;
+}
+
+.f__cafe {
+  font-family: 'Cafe24Danjunghae';
+  font-weight: 500 !important;
+}
+
+.f__tb {
+  font-family: 'TAEBAEK-milkyway';
+  font-weight: 600 !important;
+}
+
+.f__yun {
+  font-family: 'YUniverse-L';
+  font-weight: 500 !important;
+}
+
+.f__yb {
+  font-family: 'YUniverse-B';
+  font-weight: 500 !important;
+}
+
+#galleryImgWrap {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+main {
+  overflow: hidden;
+  overflow-x: hidden;
+  /*-webkit-overflow-scrolling: touch;*/
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+main.scroll {
+  overflow-y: auto;
+}
+
+main>.inner {
+  /* 섹션당 100vh + margin-bottom 값 구하기 */
+  /* height: calc(700vh + 790px); */
+  margin: 0 auto;
+  /* position: absolute; */
+  box-shadow: 0 3.2px 2.2px rgba(0, 0, 0, 0.02), 0 7px 5.4px rgba(0, 0, 0, 0.028),
+    0 12.1px 10.1px rgba(0, 0, 0, 0.035), 0 19.8px 18.1px rgba(0, 0, 0, 0.042),
+    0 34.7px 33.8px rgba(0, 0, 0, 0.05), 0 81px 81px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+main>.inner>section:first-of-type {
+  margin-bottom: 90px;
+}
+
+main>.inner>section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all 0.35s linear 0s;
+  margin-bottom: 140px;
+  /* background: white; */
+}
+
+main>.inner>section:last-of-type {
+  margin-bottom: 0px;
+}
+
+main>.inner>section>.inner {
+  max-width: 850px;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+}
+
+.loadingWrap.open {
+  display: none;
+}
+
+.loadingWrap {
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingWrap>.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#messageCard {
+  position: fixed;
+  bottom: -80px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-transition: all 0.15s linear 0s;
+  z-index: 99999;
+  box-sizing: border-box;
+  padding: 18px 22px;
+  border-radius: 8px;
+  background: var(--main-color);
+  box-shadow: 0 16px 22px -6px var(--main-color);
+}
+
+#messageCard p {
+  font-size: 1.4rem;
+  color: white;
+  white-space: nowrap;
+  margin: 0px;
+}
+
+#messageCard.on {
+  bottom: 60px;
+}
+
+@media screen and (max-width: 1280px) {
+  main>.inner {
+    width: 85%;
+  }
+
+  main>.inner>section>.inner {
+    width: 75%;
+  }
+
+  section.s1>.inner>.wrap>ul>li>dl {
+    font-size: 1.1rem;
+  }
+
+  section.s1>.inner>.wrap>dl dd strong {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main>.inner>section>.inner {
+    width: 100%;
+  }
+
+  main>.inner {
+    width: 100%;
+  }
+
+  #messageCard p {
+    font-size: 1.2rem;
+  }
+}
