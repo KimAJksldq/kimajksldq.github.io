@@ -18,26 +18,18 @@
     <meta property="og:site_name" content="카리보의 작업물 아카이빙" />
     <meta property="og:locale" content="en_US" />
     <title>웹툰작가 카리보 포트폴리오</title>
-    <script src="./js/swiper2.js"></script>
-    <script src="./js/lottie.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.smoothwheel.js"></script>
-    <script src="./js/card1.js"></script>
-    <script src="./js/card2.js"></script>
-    <script src="./js/card3.js"></script>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://site.mypopol.com/ptid01/src/js/jquery.min.js"></script>
+    <script src="https://site.mypopol.com/ptid01/src/js/swiper2.js"></script>
+    <script src="https://site.mypopol.com/ptid01/src/js/lottie.js"></script>
+    <script async src="https://site.mypopol.com/ptid01/src/js/jquery.smoothwheel.js"></script>
+    <script src="https://site.mypopol.com/ptid01/src/js/swiper.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/init.js"></script>
+    <link rel="stylesheet" href="https://site.mypopol.com/ptid01/src/css/styles.css" />
     <link rel="shortcut icon" href="./img/favicon.ico" />
   </head>
+
   <body>
-    <script>
-      let completedImgCnt = 0;
-      const loadingImg = () => {
-        completedImgCnt = completedImgCnt + 1;
-        if (completedImgCnt === 18) {
-          $('.loadingWrap.pencil').addClass('open');
-        }
-      };
-    </script>
     <div class="loadingWrap pencil">
       <div class="bg"></div>
       <lottie-player
@@ -65,8 +57,7 @@
         <div class="swiper-slide">
           <div class="img__box">
             <img
-              onload="loadingImg()"
-              src="./img/gallery/not_rabbit-1.png"
+              src="./img/gallery/not_rabbit/not_rabbit-1.png"
               alt="낫토끼 광고 설명 이미지입니다."
             />
           </div>
@@ -74,8 +65,7 @@
         <div class="swiper-slide">
           <div class="img__box">
             <img
-              onload="loadingImg()"
-              src="./img/gallery/not_rabbit-2.png"
+              src="./img/gallery/not_rabbit/not_rabbit-2.png"
               alt="낫토끼 광고 설명 이미지입니다."
             />
           </div>
@@ -86,8 +76,7 @@
         <div class="swiper-slide">
           <div class="img__box">
             <img
-              onload="loadingImg()"
-              src="./img/gallery/instar_toon-1.png"
+              src="./img/gallery/instar_toon/instar_toon-1.png"
               alt="재련 인스타툰 상세 이미지입니다."
             />
           </div>
@@ -95,8 +84,7 @@
         <div class="swiper-slide">
           <div class="img__box">
             <img
-              onload="loadingImg()"
-              src="./img/gallery/instar_toon-2.png"
+              src="./img/gallery/instar_toon/instar_toon-2.png"
               alt="재련 인스타툰 상세 이미지입니다."
             />
           </div>
@@ -104,8 +92,7 @@
         <div class="swiper-slide">
           <div class="img__box">
             <img
-              onload="loadingImg()"
-              src="./img/gallery/instar_toon-3.png"
+              src="./img/gallery/instar_toon/instar_toon-3.png"
               alt="재련 인스타툰 상세 이미지입니다."
             />
           </div>
@@ -117,7 +104,7 @@
     <div id="swiperWrap">
       <div class="bg"></div>
       <button class="close__btn"></button>
-      <section class="mySwiper swiper-container"></section>
+      <div class="mySwiper swiper-container"></div>
     </div>
     <!--  -->
     <div id="messageCard">
@@ -130,343 +117,57 @@
         <li class="on">
           <span class="icon"></span>
           <span>
-            <p class="f__tb">카리보 프로필</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">어망결에 로맨스</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">제3경호팀</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">청년시장</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">오해가 계속되면 오예입니다.</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">DEAD TO THE WORLD</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">그 외 작업물</p>
-          </span>
-        </li>
-        <li>
-          <span class="icon"></span>
-          <span>
-            <p class="f__tb">문의하기</p>
+            <p class="f__tb">프로필</p>
           </span>
         </li>
       </ul>
     </nav>
+    <!-- 요소 숨김 -->
+    <!--  -->
     <main id="main" class="scroll">
       <div class="inner">
-        <!-- 카리보 프로필 -->
-        <section id="section1" class="s1 on">
+        <!-- 프로필 -->
+        <section class="s1 on">
           <span class="bg"></span>
           <div class="inner">
             <div class="wrap">
               <dl>
                 <dt>
                   <span class="profile__img">
-                    <img
-                      onload="loadingImg()"
-                      id="img1"
-                      src="./img/profile/caribo.png"
-                      alt="Caribo 캐리커처"
-                    />
+                    <img onload="loadingImg()" id="profileImg" alt="프로필 이미지" />
                   </span>
                 </dt>
-                <dd class="f__cafe">
-                  안녕하세요?<br />
-                  웹툰작가&nbsp;<b class="f__pc">카리보</b>&nbsp;입니다.
-                </dd>
+                <dd id="titleTxt" class="f__cafe"></dd>
               </dl>
-              <ul>
-                <li>
+              <ul id="userInfoList">
+                <li class="phone">
                   <span id="phoneCopyBtn">
                     <dl>
-                      <dt class="f__yc">콝</dt>
-                      <dd class="f__tb">010-2725-1185</dd>
+                      <dt>
+                        <img id="phoneIcon" alt="핸드폰" />
+                      </dt>
+                      <dd class="f__tb"></dd>
                     </dl>
                   </span>
                 </li>
-                <li>
+                <li class="email">
                   <span id="mailCopyBtn">
                     <dl>
-                      <dt class="f__yc">멞</dt>
-                      <dd class="f__tb">nnkstory@naver.com</dd>
+                      <dt>
+                        <img id="emailIcon" alt="메일" />
+                      </dt>
+                      <dd class="f__tb"></dd>
                     </dl>
                   </span>
-                </li>
-                <li>
-                  <a href="https://twitter.com/nnkstory" target="_blank">
-                    <dl>
-                      <dt class="f__yc">샋</dt>
-                      <dd class="f__tb">@nnkstory</dd>
-                    </dl>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://instagram.com/j.ryeon.toon?igshid=YmMyMTA2M2Y=" target="_blank">
-                    <dl>
-                      <dt class="f__yb"><img src="./img/profile/instar.png" alt="인스타" /></dt>
-                      <dd class="f__tb">@j.ryeon.toon</dd>
-                    </dl>
-                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-        <!-- // 카리보 프로필 -->
-        <!-- 어망결에 로맨스 -->
-        <section id="section2">
-          <div class="inner">
-            <img
-              onload="loadingImg()"
-              id="img2"
-              src="./img/section2/poster.png"
-              alt="어망결에 로맨스 포스터"
-            />
-            <dl>
-              <dt>
-                <img
-                  onload="loadingImg()"
-                  id="img3"
-                  src="./img/section2/logo.png"
-                  alt="어망결에 로맨스 로고"
-                />
-                <ul>
-                  <li class="f__tb">2022 / 로맨스 코메디</li>
-                  <li class="f__yun">
-                    내 짝남의 비밀을 알아버렸다...?<br />좀 많이 위에서 온 짝남과의 학원 로코
-                  </li>
-                </ul>
-              </dt>
-              <dd>
-                <ul>
-                  <li class="bomtoon">
-                    <a href="https://bomtoon.com/comic/ep_list/unguarded" target="_blank">
-                      <img src="./img/bomtoon.png" alt="봄툰 로고" />
-                    </a>
-                  </li>
-                  <li class="ktoon">
-                    <a href="https://myktoon.com/web/works/list.kt?worksseq=10800" target="_blank">
-                      <img src="./img/ktoon.png" alt="케이툰 로고"
-                    /></a>
-                  </li>
-                  <li class="naver">
-                    <a
-                      href="https://series.naver.com/comic/detail.series?productNo=8571043"
-                      target="_blank"
-                    >
-                      <img src="./img/naver.png" alt="네이버 시리즈 로고" />
-                    </a>
-                  </li>
-                  <li class="rabbit">
-                    <a href="https://cdnk2021.cafe24.com/" target="_blank">
-                      <img src="./img/rabbit.png" alt="어망결에 로맨스 사이트 캐릭터" />
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </section>
-        <!-- // 어망결에 로맨스 -->
-        <!-- 제3경호팀 -->
-        <section id="section3">
-          <div class="inner">
-            <img
-              onload="loadingImg()"
-              id="img4"
-              src="./img/section3/poster.png"
-              alt="제3경호팀 포스터"
-            />
-            <dl>
-              <dt>
-                <img
-                  onload="loadingImg()"
-                  id="img5"
-                  src="./img/section3/logo.png"
-                  alt="제3경호팀 로고"
-                />
-                <ul>
-                  <li class="f__tb">2015~2023 / 액션 성장물</li>
-                  <li class="f__yun">
-                    최고의 경호팀에 예사롭지 않은 신참이 들어왔다. <br />생사를 넘나드는 치열한
-                    현장에서 겪는 경호팀의 활약상.
-                  </li>
-                </ul>
-              </dt>
-              <dd>
-                <ul>
-                  <li class="lezhin">
-                    <a href="https://www.lezhin.com/ko/comic/3rd_security" target="_blank">
-                      <img src="./img/lezhin.png" alt="레진코믹스 로고" />
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </section>
-        <!-- // 제3경호팀  -->
-        <!-- 청년시장 -->
-        <section id="section4">
-          <div class="inner">
-            <img
-              onload="loadingImg()"
-              id="img6"
-              src="./img/section4/poster.png"
-              alt="청년시장 포스터"
-            />
-            <dl>
-              <dt>
-                <img
-                  onload="loadingImg()"
-                  id="img7"
-                  src="./img/section4/logo.png"
-                  alt="청년시장 로고"
-                />
-                <ul>
-                  <li class="f__tb">2017~2020 / SF 드라마</li>
-                  <li class="f__yun">
-                    29살까지 취업하지 못한 자들이 모두 ‘청년시장’으로 끌려 간다면? <br />세상에서
-                    가장 위험한 청년들의 이야기가 시작된다!
-                  </li>
-                </ul>
-              </dt>
-              <dd>
-                <ul>
-                  <li class="kakao">
-                    <a href="https://page.kakao.com/content/50392468" target="_blank">
-                      <img src="./img/kakao.png" alt="카카오페이지 로고" />
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </section>
-        <!-- // 청년시장  -->
-        <!-- 오해가 계속되면 오예입니다 -->
-        <section id="section5">
-          <div class="inner">
-            <img
-              onload="loadingImg()"
-              id="img8"
-              src="./img/section5/poster.png"
-              alt="오해가 계속되면 오예입니다 포스터"
-            />
-            <dl>
-              <dt>
-                <img
-                  onload="loadingImg()"
-                  id="img9"
-                  src="./img/section5/logo.png"
-                  alt="오해가 계속되면 오예입니다 로고"
-                />
-                <ul>
-                  <li class="f__tb">2018~2019 / BL 개그</li>
-                  <li class="f__yun">
-                    학교의 여신 정연에게 문자로 고백한 금사빠 민규. <br />
-                    그러나 번호의 주인은 정'현'! 정신 차려보니 키 192의 무뚝뚝한 남자친구가 생겨
-                    있었다!?
-                  </li>
-                </ul>
-              </dt>
-              <dd>
-                <ul>
-                  <li class="bomtoon">
-                    <a href="https://www.bomtoon.com/comic/ep_list/oheoye" target="_blank">
-                      <img src="./img/bomtoon.png" alt="봄툰 로고" />
-                    </a>
-                  </li>
-                  <li class="lezhin">
-                    <a href="https://www.lezhin.com/ko/comic/oheoye" target="_blank">
-                      <img src="./img/lezhin.png" alt="레진코믹스 로고"
-                    /></a>
-                  </li>
-                  <li class="naver">
-                    <a
-                      href="https://series.naver.com/comic/detail.series?productNo=8046457"
-                      target="_blank"
-                    >
-                      <img src="./img/naver.png" alt="네이버 시리즈 로고" />
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </section>
-        <!-- // 오해가 계속되면 오예입니다  -->
-        <!-- Dead to the World -->
-        <section id="section6">
-          <div class="inner">
-            <img
-              onload="loadingImg()"
-              id="img8"
-              src="./img/section6/poster.png"
-              alt="Dead to the World 포스터"
-            />
-            <dl>
-              <dt>
-                <img
-                  onload="loadingImg()"
-                  id="img9"
-                  src="./img/section6/logo.png"
-                  alt="Dead to the World 로고"
-                />
-                <ul>
-                  <li class="f__yun">특이한 기면증에 걸린 A와 그를 간병하는 친구 B의 이야기</li>
-                </ul>
-              </dt>
-              <dd>
-                <ul>
-                  <li class="naver2">
-                    <a
-                      href="https://comic.naver.com/bestChallenge/list?titleId=516775"
-                      target="_blank"
-                    >
-                      <img src="./img/naver2.svg" alt="네이버 웹툰 로고" />
-                    </a>
-                  </li>
-                </ul>
-              </dd>
-            </dl>
-          </div>
-        </section>
-        <!-- // Dead to the World  -->
-        <!-- 갤러리 -->
-        <section id="section7">
+        <!-- // 프로필 -->
+        <section id="cardSwiper">
           <div class="inner" ng-app="starter" no-scroll>
             <ion-pane ng-controller="CardsCtrl">
-              <!-- <ion-header-bar class="bar-default">
-                <h3 class="gallery__title">TD Cards</h1>
-                <h4 class="gallery__sub__title">이미지 카드를 넘기거나 클릭해보세요</h1>
-              </ion-header-bar> -->
-
               <td-cards id="tdCards">
                 <td-card
                   ng-repeat="card in cards"
@@ -478,9 +179,7 @@
                   data-index="{{$index}}"
                 >
                   <div class="image" ng-controller="CardCtrl">
-                    <div class="no-text">NOPE</div>
                     <img onload="loadingImg()" ng-src="{{card.image}}" />
-                    <div class="yes-text">LIKE</div>
                   </div>
                 </td-card>
                 <p class="notice">카드 이미지를 넘기거나 클릭해보세요</p>
@@ -488,77 +187,11 @@
             </ion-pane>
           </div>
         </section>
-        <!-- // 갤러리 -->
-        <!-- 문의하기 -->
-        <section id="section8" class="contactus">
-          <div class="inner">
-            <form id="contactForm">
-              <div>
-                <ul>
-                  <li>
-                    <label class="f__tb" for="subjectInput">카테고리</label>
-                    <span>
-                      <input
-                        type="text"
-                        id="subjectInput"
-                        readonly
-                        value="웹툰문의"
-                        name="subject"
-                      />
-                      <ul id="categorySelect">
-                        <li class="on">웹툰문의</li>
-                        <li>디자인문의</li>
-                        <li>기타문의</li>
-                      </ul>
-                    </span>
-                  </li>
-                  <li>
-                    <label class="f__tb" for="titleInput">제목</label>
-                    <span>
-                      <input type="text" id="titleInput" name="title" />
-                    </span>
-                  </li>
-                  <li>
-                    <label class="f__tb" for="bodyInput">내용</label>
-                    <span>
-                      <textarea name="body" id="bodyInput"></textarea>
-                    </span>
-                  </li>
-                  <li>
-                    <label class="f__tb" for="phoneInput">연락처</label>
-                    <span>
-                      <input
-                        type="number"
-                        id="phoneInput"
-                        name="phone"
-                        placeholder="- 빼고 숫자만 입력해주세요."
-                      />
-                    </span>
-                  </li>
-                  <li>
-                    <label class="f__tb" for="emailInput">이메일</label>
-                    <span>
-                      <input
-                        placeholder="연락받을 이메일을 적어주세요."
-                        type="email"
-                        id="emailInput"
-                        name="email"
-                      />
-                    </span>
-                  </li>
-                  <li>
-                    <button class="f__tb" id="submitBtn">보내기</button>
-                  </li>
-                </ul>
-              </div>
-            </form>
-          </div>
-        </section>
-        <!-- // 문의하기 -->
       </div>
     </main>
+    <script src="https://site.mypopol.com/ptid01/src/js/card2.js"></script>
+    <script src="./js/card3.js"></script>
     <script src="./js/cardInit.js"></script>
-    <script src="./js/swiper.js"></script>
-    <script src="./js/main.min.js"></script>
+    <script src="./js/init2.js"></script>
   </body>
 </html>
