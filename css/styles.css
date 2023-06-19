@@ -209,7 +209,7 @@ main.scroll {
   overflow-y: auto;
 }
 
-main>.inner {
+main > .inner {
   /* 섹션당 100vh + margin-bottom 값 구하기 */
   /* height: calc(700vh + 790px); */
   margin: 0 auto;
@@ -220,11 +220,11 @@ main>.inner {
   overflow: hidden;
 }
 
-main>.inner>section:first-of-type {
+main > .inner > section:first-of-type {
   margin-bottom: 90px;
 }
 
-main>.inner>section {
+main > .inner > section {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -233,17 +233,41 @@ main>.inner>section {
   /* background: white; */
 }
 
-main>.inner>section:last-of-type {
+main > .inner > section:last-of-type {
   margin-bottom: 0px;
 }
 
-main>.inner>section>.inner {
+main > .inner > section > .inner {
   max-width: 850px;
   width: 50%;
   height: 100%;
   box-sizing: border-box;
   margin: 0 auto;
   position: relative;
+}
+
+main > .inner > section > .inner:after {
+  position: absolute;
+  left: 0;
+  bottom: -31%;
+  width: 100%;
+  height: 80%;
+  content: '';
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 100%);
+  -webkit-transition: all 0.35s ease-in 0s;
+}
+
+main > .inner > section.on > .inner:after {
+  opacity: 1;
+  bottom: -1%;
+}
+
+main > .inner > section:first-of-type > .inner:after {
+  display: none;
+}
+main > .inner > section:last-of-type > .inner:after {
+  display: none;
 }
 
 .loadingWrap.open {
@@ -262,7 +286,7 @@ main>.inner>section>.inner {
   justify-content: center;
 }
 
-.loadingWrap>.bg {
+.loadingWrap > .bg {
   position: absolute;
   left: 0;
   top: 0;
@@ -297,29 +321,29 @@ main>.inner>section>.inner {
 }
 
 @media screen and (max-width: 1280px) {
-  main>.inner {
+  main > .inner {
     width: 85%;
   }
 
-  main>.inner>section>.inner {
+  main > .inner > section > .inner {
     width: 75%;
   }
 
-  section.s1>.inner>.wrap>ul>li>dl {
+  section.s1 > .inner > .wrap > ul > li > dl {
     font-size: 1.1rem;
   }
 
-  section.s1>.inner>.wrap>dl dd strong {
+  section.s1 > .inner > .wrap > dl dd strong {
     font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width: 800px) {
-  main>.inner>section>.inner {
+  main > .inner > section > .inner {
     width: 100%;
   }
 
-  main>.inner {
+  main > .inner {
     width: 100%;
   }
 

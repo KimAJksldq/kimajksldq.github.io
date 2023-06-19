@@ -1,5 +1,5 @@
 /*  */
-main>.inner>section>.inner>img {
+main > .inner > section > .inner > img {
   position: absolute;
   left: 50%;
   top: 80%;
@@ -9,12 +9,12 @@ main>.inner>section>.inner>img {
   height: 100%;
 }
 
-main>.inner>section.on>.inner>img {
+main > .inner > section.on > .inner > img {
   top: 50%;
   opacity: 1;
 }
 
-main>.inner>section>.inner>dl {
+main > .inner > section > .inner > dl {
   position: absolute;
   left: 50%;
   bottom: -110px;
@@ -23,13 +23,14 @@ main>.inner>section>.inner>dl {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
-main>.inner>section>.inner>dl dt img {
+main > .inner > section > .inner > dl dt img {
   max-width: 320px;
 }
 
-main>.inner>section>.inner>dl dt {
+main > .inner > section > .inner > dl dt {
   position: relative;
   opacity: 0;
   top: 30px;
@@ -38,19 +39,19 @@ main>.inner>section>.inner>dl dt {
   -webkit-transition: all 0.35s ease-in 0s;
 }
 
-main>.inner>section>.inner>dl dt>ul {
+main > .inner > section > .inner > dl dt > ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main>.inner>section>.inner>dl dt>ul li:first-of-type {
+main > .inner > section > .inner > dl dt > ul li:first-of-type {
   /* margin-top: 0px; */
   font-size: 1.1rem;
   color: #646464;
 }
 
-main>.inner>section>.inner>dl dt>ul li {
+main > .inner > section > .inner > dl dt > ul li {
   text-align: center;
   line-height: 1.62;
   font-size: 1rem;
@@ -58,22 +59,22 @@ main>.inner>section>.inner>dl dt>ul li {
   white-space: nowrap;
 }
 
-main>.inner>section.on>.inner>dl dt {
+main > .inner > section.on > .inner > dl dt {
   opacity: 1;
   top: 0;
 }
 
-main>.inner>section>.inner>dl dt>img {
+main > .inner > section > .inner > dl dt > img {
   width: 100%;
 }
 
-main>.inner>section>.inner>dl dd ul {
+main > .inner > section > .inner > dl dd ul {
   display: flex;
   justify-content: center;
   margin-top: 40px;
 }
 
-main>.inner>section>.inner>dl dd ul li {
+main > .inner > section > .inner > dl dd ul li {
   margin-left: 32px;
   opacity: 0.1;
   width: 60px;
@@ -96,27 +97,27 @@ main>.inner>section>.inner>dl dd ul li {
   box-shadow: 0 10px 20px -6px #00d463;
 } */
 
-main>.inner>section>.inner>dl dd ul li.series {
+main > .inner > section > .inner > dl dd ul li.series {
   background: #00dc64;
   box-shadow: 0 10px 20px -6px #00dc64;
 }
 
-main>.inner>section>.inner>dl dd ul li.naver {
+main > .inner > section > .inner > dl dd ul li.naver {
   background: #00d463;
   box-shadow: 0 10px 20px -6px #00d463;
 }
 
-main>.inner>section>.inner>dl dd ul li.ridi {
-  background: #1E9EFF;
-  box-shadow: 0 10px 20px -6px #1E9EFF;
+main > .inner > section > .inner > dl dd ul li.ridi {
+  background: #1e9eff;
+  box-shadow: 0 10px 20px -6px #1e9eff;
 }
 
-main>.inner>section>.inner>dl dd ul li.kakao {
+main > .inner > section > .inner > dl dd ul li.kakao {
   background: #ffbc00;
   box-shadow: 0 10px 20px -6px #ffbc00;
 }
 
-main>.inner>section>.inner>dl dd ul li.lezhin {
+main > .inner > section > .inner > dl dd ul li.lezhin {
   background: #eb1c22;
   box-shadow: 0 10px 20px -6px #eb1c22;
 }
@@ -131,15 +132,15 @@ main>.inner>section>.inner>dl dd ul li.lezhin {
   box-shadow: 0 10px 20px -6px #fccc30;
 } */
 
-main>.inner>section.on>.inner>dl dd ul li:hover {
+main > .inner > section.on > .inner > dl dd ul li:hover {
   opacity: 1;
 }
 
-main>.inner>section>.inner>dl dd ul li:first-of-type {
+main > .inner > section > .inner > dl dd ul li:first-of-type {
   margin-left: 0px;
 }
 
-main>.inner>section>.inner>dl dd ul li a {
+main > .inner > section > .inner > dl dd ul li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -148,37 +149,37 @@ main>.inner>section>.inner>dl dd ul li a {
   -webkit-transition: all 0.15s ease-in-out 0.35s;
 }
 
-main>.inner>section.on>.inner>dl dd ul li {
+main > .inner > section.on > .inner > dl dd ul li {
   opacity: 1;
 }
 
-main>.inner>section.on>.inner>dl dd ul li a {
+main > .inner > section.on > .inner > dl dd ul li a {
   top: 0px;
 }
 
-main>.inner>section>.inner>dl dd ul li a img {
+main > .inner > section > .inner > dl dd ul li a img {
   width: 100%;
   height: 100%;
 }
 
 @media screen and (max-width: 1536px) {
-  main>.inner>section>.inner>dl dt img {
+  main > .inner > section > .inner > dl dt img {
     max-width: 240px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  main>.inner>section>.inner>dl dd ul li {
+  main > .inner > section > .inner > dl dd ul li {
     width: 50px;
     height: 50px;
     margin-left: 22px;
   }
 
-  main>.inner>section>.inner>dl dt>ul li:first-of-type {
+  main > .inner > section > .inner > dl dt > ul li:first-of-type {
     font-size: 1rem;
   }
 
-  main>.inner>section>.inner>dl dt>ul li {
+  main > .inner > section > .inner > dl dt > ul li {
     white-space: normal;
   }
 }
