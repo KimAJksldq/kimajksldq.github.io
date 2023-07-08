@@ -82,7 +82,7 @@ main > .inner > section > .inner > dl dd ul li {
   overflow: hidden;
   background: white;
   padding: 8px;
-  border-radius: 100px;
+  border-radius: 4px;
   box-shadow: 0 10px 20px -6px rgb(211, 211, 211);
   -webkit-transition: all 0.15s ease-in-out 0.35s;
 }
@@ -96,6 +96,16 @@ main > .inner > section > .inner > dl dd ul li {
   background: #00d463;
   box-shadow: 0 10px 20px -6px #00d463;
 } */
+
+main > .inner > section > .inner > dl dd ul li.ktoon {
+  background: #fccc30;
+  box-shadow: 0 10px 20px -6px #fccc30;
+}
+
+main > .inner > section > .inner > dl dd ul li.bomtoon {
+  background: #ff33ac;
+  box-shadow: 0 10px 20px -6px #ff33ac;
+}
 
 main > .inner > section > .inner > dl dd ul li.series {
   background: #00dc64;
@@ -145,7 +155,7 @@ main > .inner > section > .inner > dl dd ul li a {
   width: 100%;
   height: 100%;
   position: relative;
-  top: -50px;
+  top: -70px;
   -webkit-transition: all 0.15s ease-in-out 0.35s;
 }
 
@@ -160,6 +170,7 @@ main > .inner > section.on > .inner > dl dd ul li a {
 main > .inner > section > .inner > dl dd ul li a img {
   width: 100%;
   height: 100%;
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 1536px) {

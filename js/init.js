@@ -71,7 +71,9 @@ fetch('https://kimjihodo.synology.me:3001/site/popolInfo', {
           const siteArray = [];
           const etcJson = JSON.parse(worksInfo[i].etc);
           etcJson.website.map((obj, idx) => {
-            if (['lezhin', 'kakao', 'naver', 'ridi', 'series'].includes(obj.name)) {
+            if (
+              ['lezhin', 'kakao', 'naver', 'ridi', 'series', 'bomtoon', 'ktoon'].includes(obj.name)
+            ) {
               siteArray.push(`
                           <li class="${obj.name}">
                             <a href="${obj.link}" target="_blank">
@@ -81,9 +83,7 @@ fetch('https://kimjihodo.synology.me:3001/site/popolInfo', {
                         `);
             } else {
               siteArray.push(`
-                          <li style="background: ${obj.color};box-shadow : 0 10px 20px -6px ${
-                obj.color === '#fff' ? 'rgb(211, 211, 211)' : obj.color
-              }">
+                          <li style="padding: 4px; background: none;box-shadow : 0 10px 20px -6px rgb(211, 211, 211)">
                             <a href="${obj.link}" target="_blank">
                               <img src="./img//${obj.img}" />
                             </a>
